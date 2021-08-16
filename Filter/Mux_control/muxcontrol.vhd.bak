@@ -1,0 +1,9 @@
+library ieee;
+use std_logic_1164.all;
+
+entity muxcontrol is 
+	port(
+	clk, reset, sw0, sw1, sw2, sw3 : in std_logic;
+	u_33, u32 : out std_logic_vector(7 downto 0);
+	muxchannel : out
+end muxcontrol;

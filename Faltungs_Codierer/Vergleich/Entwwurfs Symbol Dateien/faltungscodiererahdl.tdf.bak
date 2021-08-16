@@ -1,0 +1,74 @@
+SUBDESIGN faltungscodiererahdl(
+	d : INPUT;
+	clk : INPUT;
+	reset : INPUT;
+	y1 : OUTPUT;
+	y0 : OUTPUT;
+)
+VARIABLE
+	ss: MACHINE WITH STATES (
+		s0 = B"00",
+		s1 = B"01",
+		s2 = B"10",
+		s3 = B"11");
+temp1 : NODE;
+temp0 : NODE;
+BEGIN
+	ss.clk = clk;
+	ss.reset = reset;
+	y1 = DFF(temp1, clk, , VCC);
+	y0 = DFF(temp0, clk, , VCC);
+
+--IF reset == B"1" THEN
+	CASE ss IS
+		WHEN s0 =>
+			IF d == B"0" THEN 
+				temp1 = B"0";
+				temp0 = B"0";
+				ss = s0;
+			ELSIF d == B"1" THEN
+				temp1 = B"1";
+				temp0 = B"1";
+				ss = s1;
+			END IF;
+		
+		WHEN s1 =>
+			IF d == B"0" THEN 
+				temp1 = B"1";
+				temp0 = B"0";
+				ss = s2;
+			ELSIF d == B"1" THEN
+				temp1 = B"0";
+				temp0 = B"1";
+				ss = s3;
+			END IF;
+		
+		WHEN s2 =>
+			IF d == B"0" THEN 
+				temp1 = B"1";
+				temp0 = B"1";
+				ss = s0;
+			ELSIF d == B"1" THEN
+				temp1 = B"0";
+				temp0 = B"0";
+				ss = s1;
+			END IF;
+			
+		WHEN s3 =>
+			IF d == B"0" THEN 
+				temp1 = B"0";
+				temp0 = B"1";
+				ss = s2;
+			ELSIF d == B"1" THEN
+				temp1 = B"1";
+				temp0 = B"0";
+				ss = s3;
+			END IF;
+	END CASE;
+
+	%ELSIF reset == B"0" THEN
+		ss = s0;
+		y1 = B"0";
+		y1 = B"0";
+	END IF;%
+END;

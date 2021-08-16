@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Jan 17 14:23:16 2018
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : muxcontrol
+Top-level Entity Name : muxcontrol
+Family : Cyclone II
+Total logic elements : 7
+    Total combinational functions : 7
+    Dedicated logic registers : 2
+Total registers : 2
+Total pins : 24
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

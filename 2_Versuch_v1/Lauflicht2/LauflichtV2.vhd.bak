@@ -1,0 +1,10 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164;
+
+
+ENTITY lauflicht IS
+	PORT (
+		clk, reset, start, change_mode, muster_ubernahme: IN STD_LOGIC;
+		muster : IN STD_LOGIC_VECTOR(7 downto 0);
+		LEDs, )
+

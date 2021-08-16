@@ -1,0 +1,410 @@
+Analysis & Synthesis report for LauflichtV2
+Wed Dec 06 17:57:09 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++------------------------------------+--------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Dec 06 17:57:09 2017            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; LauflichtV2                                      ;
+; Top-level Entity Name              ; LauflichtV2                                      ;
+; Family                             ; Cyclone II                                       ;
+; Total logic elements               ; 70                                               ;
+;     Total combinational functions  ; 70                                               ;
+;     Dedicated logic registers      ; 0                                                ;
+; Total registers                    ; 0                                                ;
+; Total pins                         ; 52                                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
++------------------------------------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C70F672C6       ;                    ;
+; Top-level entity name                                                      ; LauflichtV2        ; LauflichtV2        ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                        ;
++----------------------------------+-----------------+-----------------+----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                 ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------+---------+
+; LauflichtV2.vhd                  ; yes             ; User VHDL File  ; E:/FPGA Praktikum/Lauflicht2/LauflichtV2.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 70           ;
+;                                             ;              ;
+; Total combinational functions               ; 70           ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 31           ;
+;     -- 3 input functions                    ; 35           ;
+;     -- <=2 input functions                  ; 4            ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 70           ;
+;     -- arithmetic mode                      ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 0            ;
+;     -- Dedicated logic registers            ; 0            ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 52           ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+; Maximum fan-out node                        ; zustand[0]~0 ;
+; Maximum fan-out                             ; 13           ;
+; Total fan-out                               ; 249          ;
+; Average fan-out                             ; 2.04         ;
++---------------------------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |LauflichtV2               ; 70 (70)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 52   ; 0            ; |LauflichtV2        ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; LEDs_temp[0]                                        ; LEDs_temp[0]        ; yes                    ;
+; LEDs_temp[1]                                        ; LEDs_temp[7]        ; yes                    ;
+; LEDs_temp[2]                                        ; LEDs_temp[7]        ; yes                    ;
+; LEDs_temp[3]                                        ; LEDs_temp[7]        ; yes                    ;
+; LEDs_temp[4]                                        ; LEDs_temp[7]        ; yes                    ;
+; LEDs_temp[5]                                        ; LEDs_temp[7]        ; yes                    ;
+; LEDs_temp[6]                                        ; LEDs_temp[7]        ; yes                    ;
+; LEDs_temp[7]                                        ; LEDs_temp[7]        ; yes                    ;
+; count_temp[0]                                       ; LEDs_temp[7]        ; yes                    ;
+; count_temp[1]                                       ; LEDs_temp[7]        ; yes                    ;
+; count_temp[2]                                       ; LEDs_temp[7]        ; yes                    ;
+; count_temp[3]                                       ; LEDs_temp[7]        ; yes                    ;
+; muster_temp[7]                                      ; muster_ubernahme    ; yes                    ;
+; zustand[0]                                          ; LEDs_temp[7]        ; yes                    ;
+; muster_temp[6]                                      ; muster_ubernahme    ; yes                    ;
+; muster_temp[5]                                      ; muster_ubernahme    ; yes                    ;
+; zustand[1]                                          ; LEDs_temp[7]        ; yes                    ;
+; muster_temp[4]                                      ; muster_ubernahme    ; yes                    ;
+; muster_temp[3]                                      ; muster_ubernahme    ; yes                    ;
+; muster_temp[2]                                      ; muster_ubernahme    ; yes                    ;
+; muster_temp[1]                                      ; muster_ubernahme    ; yes                    ;
+; zustand[2]                                          ; LEDs_temp[7]        ; yes                    ;
+; muster_temp[0]                                      ; muster_ubernahme    ; yes                    ;
+; Number of user-specified and inferred latches = 23  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Dec 06 17:57:04 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LauflichtV2 -c LauflichtV2
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file lauflichtv2.vhd
+    Info (12022): Found design unit 1: LauflichtV2-laufen
+    Info (12023): Found entity 1: LauflichtV2
+Info (12127): Elaborating entity "LauflichtV2" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(30): signal "muster_ubernahme" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(31): signal "muster" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(35): signal "LEDs_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(36): signal "zustand" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(37): signal "count_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(43): signal "zustand" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(46): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(47): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(48): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(49): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(50): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(51): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(52): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(54): signal "count_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(56): signal "reverse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(65): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(66): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(67): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(68): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(69): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(70): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(71): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(72): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(74): signal "count_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(76): signal "reverse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(84): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(85): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(86): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(87): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(88): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(89): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(90): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(91): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(93): signal "count_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(95): signal "reverse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(103): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(104): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(105): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(106): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(107): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(108): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(109): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(110): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(112): signal "count_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(114): signal "reverse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(122): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(123): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(124): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(125): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(126): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(127): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(128): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(129): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(131): signal "count_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(133): signal "reverse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(141): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(142): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(143): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(144): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(145): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(146): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(147): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(148): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(150): signal "count_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(152): signal "reverse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(160): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(161): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(162): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(163): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(164): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(165): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(166): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(167): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(169): signal "count_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(171): signal "reverse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(179): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(180): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(181): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(182): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(183): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(184): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(185): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(186): signal "muster_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(188): signal "count_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(190): signal "reverse" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LauflichtV2.vhd(203): signal "count_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at LauflichtV2.vhd(22): inferring latch(es) for signal or variable "count_temp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at LauflichtV2.vhd(22): inferring latch(es) for signal or variable "muster_temp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at LauflichtV2.vhd(22): inferring latch(es) for signal or variable "zustand", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at LauflichtV2.vhd(22): inferring latch(es) for signal or variable "LEDs_temp", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "LEDs_temp[0]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "LEDs_temp[1]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "LEDs_temp[2]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "LEDs_temp[3]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "LEDs_temp[4]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "LEDs_temp[5]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "LEDs_temp[6]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "LEDs_temp[7]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "zustand[0]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "zustand[1]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "zustand[2]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "muster_temp[0]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "muster_temp[1]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "muster_temp[2]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "muster_temp[3]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "muster_temp[4]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "muster_temp[5]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "muster_temp[6]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "muster_temp[7]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "count_temp[0]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "count_temp[1]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "count_temp[2]" at LauflichtV2.vhd(22)
+Info (10041): Inferred latch for "count_temp[3]" at LauflichtV2.vhd(22)
+Warning (13012): Latch LEDs_temp[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal zustand[2]
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 122 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 40 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 70 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 92 warnings
+    Info: Peak virtual memory: 539 megabytes
+    Info: Processing ended: Wed Dec 06 17:57:09 2017
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:02
+
+

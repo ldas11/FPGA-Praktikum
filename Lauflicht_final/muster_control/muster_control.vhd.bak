@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity muster_control is
+	port(
+	clk, muster_switch, reset : in std_logic;
+	muster_in : in std_logic_vector(7 downto 0);
+	muster_out : out std_logic_vector(7 downto 0)
+	);
+end muster_control;
+
+architecture set_template of muster_control is
+
+begin
+
+end set_template;

@@ -1,0 +1,66 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY seven_segment_decoder IS
+	PORT(
+		reset : IN STD_LOGIC;
+		count_8 : IN INTEGER;
+		u32, u33 : OUT STD_LOGIC_VECTOR(7 downto 0)
+		);
+END seven_segment_decoder;
+
+ARCHITECTURE segment_control OF seven_segment_decoder IS
+
+SIGNAL internal_counter : INTEGER RANGE 0 TO 100;
+SIGNAL tens : INTEGER RANGE 0 TO 10;
+SIGNAL ones : INTEGER RANGE 0 TO 10;
+SIGNAL u32_temp : STD_LOGIC_VECTOR(7 downto 0);
+SIGNAL u33_temp : STD_LOGIC_VECTOR(7 downto 0);
+
+FUNCTION coder(number : INTEGER) RETURN STD_LOGIC_VECTOR IS
+	VARIABLE coded_number : STD_LOGIC_VECTOR(7 downto 0);
+	BEGIN
+		CASE number IS
+			WHEN 0 => 
+				coded_number := "00000011";
+			WHEN 1 =>
+				coded_number := "10011111";
+			WHEN 2 =>
+				coded_number := "00100101";
+			WHEN 3 =>
+				coded_number := "00001101";
+			WHEN 4 =>
+				coded_number := "10011101";
+			WHEN 5 =>
+				coded_number := "01001001";
+			WHEN 6 =>
+				coded_number := "01000001";
+			WHEN 7 =>
+				coded_number := "00011111";
+			WHEN 8 =>
+				coded_number := "00000001";
+			WHEN 9 =>
+				coded_number := "00011001";
+		END CASE;
+	RETURN coded_number;
+END decoder;
+
+BEGIN
+	PROCESS(count_8)
+	BEGIN
+		IF (reset = '0') THEN
+			internal_counter <= 0;
+		ELSIF(count_8 = 0) THEN 
+			internal_counter <= internal_counter + 1;
+		END IF;
+
+		tens <= (internal_counter / 10);
+		ones <= (internal_counter mod 10);
+		u32_temp <= coder(tens);
+		u33_temp <= coder(ones);
+	END PROCESS;
+
+u32 <= u32_temp;
+u33 <= u33_temp;
+
+END segment_control;

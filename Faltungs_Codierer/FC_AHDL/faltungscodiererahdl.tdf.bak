@@ -1,0 +1,64 @@
+SUBDESIGN faltungscodiererahdl(
+	d : INPUT;
+	clk : INPUT;
+	reset : INPUT;
+	y1 : OUTPUT;
+	y0 : OUTPUT;
+)
+VARIABLE
+	ss: MACHINE OF BITS (phase[1..0])
+		WITH STATES (
+		s0 = B"00",
+		s1 = B"01",
+		s2 = B"10",
+		s3 = B"11");
+BEGIN
+	ss.clk = clk;
+	ss.reset = reset;
+	
+	CASE ss IS
+		WHEN s0 =>
+			IF !d THEN 
+				y1 = '0';
+				y0 = '0';
+				ss = s0;
+			ELSIF d THEN
+				y1 = '1';
+				y0 = '1';
+				ss = s1;
+			END IF;
+		
+		WHEN s1 =>
+			IF !d THEN 
+				y1 = '1';
+				y0 = '0';
+				ss = s2;
+			ELSIF d THEN
+				y1 = '0';
+				y0 = '1';
+				ss = s3;
+			END IF;
+		
+		WHEN s2 =>
+			IF !d THEN 
+				y1 = '1';
+				y0 = '1';
+				ss = s0;
+			ELSIF d THEN
+				y1 = '0';
+				y0 = '0';
+				ss = s1;
+			END IF;
+			
+		WHEN s3 =>
+			IF !d THEN 
+				y1 = '0';
+				y0 = '1';
+				ss = s2;
+			ELSIF d THEN
+				y1 = '1';
+				y0 = '0';
+				ss = s3;
+			END IF;
+	END CASE;
+END;

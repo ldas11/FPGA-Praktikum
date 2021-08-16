@@ -1,0 +1,16 @@
+|final_counter
+scaler => tick_temp.CLK
+scaler => state[0].CLK
+scaler => state[1].CLK
+scaler => counter[0].CLK
+scaler => counter[1].CLK
+scaler => counter[2].CLK
+reset => tick_temp.ACLR
+reset => state[0].ACLR
+reset => state[1].ACLR
+reset => counter[0].ACLR
+reset => counter[1].ACLR
+reset => counter[2].ACLR
+tick <= tick_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

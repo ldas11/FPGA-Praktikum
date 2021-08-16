@@ -1,0 +1,9 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity scaler is
+	port(
+	clk, start_pause, reset, mode_switch : in std_logic;
+	rythm : out std_logic
+	);
+end scaler;

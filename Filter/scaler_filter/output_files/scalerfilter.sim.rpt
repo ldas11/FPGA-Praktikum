@@ -1,0 +1,331 @@
+Simulator report for scalerfilter
+Wed Jan 17 17:08:01 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 120 nodes    ;
+; Simulation Coverage         ;      58.33 % ;
+; Total Number of Transitions ; 20358        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                         ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                       ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                    ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                          ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                           ;               ;
+; Vector input source                                                                        ; E:/FPGA Praktikum/Lauflicht_final/scaler_filter/Waveform1.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                            ; On            ;
+; Check outputs                                                                              ; Off                                                           ; Off           ;
+; Report simulation coverage                                                                 ; On                                                            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                            ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                            ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                            ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                           ; Off           ;
+; Detect glitches                                                                            ; Off                                                           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                           ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                           ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                          ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      58.33 % ;
+; Total nodes checked                                 ; 120          ;
+; Total output ports checked                          ; 120          ;
+; Total output ports with complete 1/0-value coverage ; 70           ;
+; Total output ports with no 1/0-value coverage       ; 49           ;
+; Total output ports with no 1-value coverage         ; 49           ;
+; Total output ports with no 0-value coverage         ; 50           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                      ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |scalerfilter|counter_temp~12 ; |scalerfilter|counter_temp~12 ; out              ;
+; |scalerfilter|counter_temp~13 ; |scalerfilter|counter_temp~13 ; out              ;
+; |scalerfilter|counter_temp~14 ; |scalerfilter|counter_temp~14 ; out              ;
+; |scalerfilter|counter_temp~15 ; |scalerfilter|counter_temp~15 ; out              ;
+; |scalerfilter|counter_temp~16 ; |scalerfilter|counter_temp~16 ; out              ;
+; |scalerfilter|counter_temp~17 ; |scalerfilter|counter_temp~17 ; out              ;
+; |scalerfilter|counter_temp~18 ; |scalerfilter|counter_temp~18 ; out              ;
+; |scalerfilter|counter_temp~19 ; |scalerfilter|counter_temp~19 ; out              ;
+; |scalerfilter|counter_temp[6] ; |scalerfilter|counter_temp[6] ; regout           ;
+; |scalerfilter|counter_temp[5] ; |scalerfilter|counter_temp[5] ; regout           ;
+; |scalerfilter|counter_temp[4] ; |scalerfilter|counter_temp[4] ; regout           ;
+; |scalerfilter|counter_temp[3] ; |scalerfilter|counter_temp[3] ; regout           ;
+; |scalerfilter|counter_temp[2] ; |scalerfilter|counter_temp[2] ; regout           ;
+; |scalerfilter|counter_temp[1] ; |scalerfilter|counter_temp[1] ; regout           ;
+; |scalerfilter|zustand         ; |scalerfilter|zustand         ; regout           ;
+; |scalerfilter|rythm_temp~0    ; |scalerfilter|rythm_temp~0    ; out              ;
+; |scalerfilter|counter_temp[0] ; |scalerfilter|counter_temp[0] ; regout           ;
+; |scalerfilter|rythm_temp      ; |scalerfilter|rythm_temp      ; regout           ;
+; |scalerfilter|clk             ; |scalerfilter|clk             ; out              ;
+; |scalerfilter|rythm           ; |scalerfilter|rythm           ; pin_out          ;
+; |scalerfilter|LessThan0~0     ; |scalerfilter|LessThan0~0     ; out0             ;
+; |scalerfilter|LessThan0~1     ; |scalerfilter|LessThan0~1     ; out0             ;
+; |scalerfilter|LessThan0~2     ; |scalerfilter|LessThan0~2     ; out0             ;
+; |scalerfilter|LessThan0~3     ; |scalerfilter|LessThan0~3     ; out0             ;
+; |scalerfilter|LessThan0~4     ; |scalerfilter|LessThan0~4     ; out0             ;
+; |scalerfilter|LessThan0~5     ; |scalerfilter|LessThan0~5     ; out0             ;
+; |scalerfilter|LessThan0~6     ; |scalerfilter|LessThan0~6     ; out0             ;
+; |scalerfilter|LessThan0~7     ; |scalerfilter|LessThan0~7     ; out0             ;
+; |scalerfilter|LessThan0~8     ; |scalerfilter|LessThan0~8     ; out0             ;
+; |scalerfilter|LessThan0~9     ; |scalerfilter|LessThan0~9     ; out0             ;
+; |scalerfilter|LessThan0~10    ; |scalerfilter|LessThan0~10    ; out0             ;
+; |scalerfilter|LessThan0~11    ; |scalerfilter|LessThan0~11    ; out0             ;
+; |scalerfilter|LessThan0~12    ; |scalerfilter|LessThan0~12    ; out0             ;
+; |scalerfilter|LessThan0~13    ; |scalerfilter|LessThan0~13    ; out0             ;
+; |scalerfilter|LessThan0~14    ; |scalerfilter|LessThan0~14    ; out0             ;
+; |scalerfilter|LessThan0~15    ; |scalerfilter|LessThan0~15    ; out0             ;
+; |scalerfilter|LessThan0~16    ; |scalerfilter|LessThan0~16    ; out0             ;
+; |scalerfilter|LessThan0~17    ; |scalerfilter|LessThan0~17    ; out0             ;
+; |scalerfilter|LessThan0~18    ; |scalerfilter|LessThan0~18    ; out0             ;
+; |scalerfilter|LessThan0~19    ; |scalerfilter|LessThan0~19    ; out0             ;
+; |scalerfilter|LessThan0~20    ; |scalerfilter|LessThan0~20    ; out0             ;
+; |scalerfilter|LessThan0~21    ; |scalerfilter|LessThan0~21    ; out0             ;
+; |scalerfilter|LessThan0~22    ; |scalerfilter|LessThan0~22    ; out0             ;
+; |scalerfilter|LessThan0~23    ; |scalerfilter|LessThan0~23    ; out0             ;
+; |scalerfilter|LessThan0~24    ; |scalerfilter|LessThan0~24    ; out0             ;
+; |scalerfilter|LessThan0~25    ; |scalerfilter|LessThan0~25    ; out0             ;
+; |scalerfilter|LessThan0~26    ; |scalerfilter|LessThan0~26    ; out0             ;
+; |scalerfilter|LessThan0~27    ; |scalerfilter|LessThan0~27    ; out0             ;
+; |scalerfilter|LessThan0~28    ; |scalerfilter|LessThan0~28    ; out0             ;
+; |scalerfilter|LessThan0~29    ; |scalerfilter|LessThan0~29    ; out0             ;
+; |scalerfilter|LessThan0~30    ; |scalerfilter|LessThan0~30    ; out0             ;
+; |scalerfilter|LessThan0~31    ; |scalerfilter|LessThan0~31    ; out0             ;
+; |scalerfilter|LessThan0~32    ; |scalerfilter|LessThan0~32    ; out0             ;
+; |scalerfilter|LessThan0~33    ; |scalerfilter|LessThan0~33    ; out0             ;
+; |scalerfilter|LessThan0~34    ; |scalerfilter|LessThan0~34    ; out0             ;
+; |scalerfilter|Add0~0          ; |scalerfilter|Add0~0          ; out0             ;
+; |scalerfilter|Add0~1          ; |scalerfilter|Add0~1          ; out0             ;
+; |scalerfilter|Add0~2          ; |scalerfilter|Add0~2          ; out0             ;
+; |scalerfilter|Add0~3          ; |scalerfilter|Add0~3          ; out0             ;
+; |scalerfilter|Add0~4          ; |scalerfilter|Add0~4          ; out0             ;
+; |scalerfilter|Add0~5          ; |scalerfilter|Add0~5          ; out0             ;
+; |scalerfilter|Add0~6          ; |scalerfilter|Add0~6          ; out0             ;
+; |scalerfilter|Add0~7          ; |scalerfilter|Add0~7          ; out0             ;
+; |scalerfilter|Add0~8          ; |scalerfilter|Add0~8          ; out0             ;
+; |scalerfilter|Add0~9          ; |scalerfilter|Add0~9          ; out0             ;
+; |scalerfilter|Add0~10         ; |scalerfilter|Add0~10         ; out0             ;
+; |scalerfilter|Add0~11         ; |scalerfilter|Add0~11         ; out0             ;
+; |scalerfilter|Add0~12         ; |scalerfilter|Add0~12         ; out0             ;
+; |scalerfilter|Equal0~0        ; |scalerfilter|Equal0~0        ; out0             ;
+; |scalerfilter|Equal1~0        ; |scalerfilter|Equal1~0        ; out0             ;
++-------------------------------+-------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                           ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |scalerfilter|counter_temp~0   ; |scalerfilter|counter_temp~0   ; out              ;
+; |scalerfilter|counter_temp~1   ; |scalerfilter|counter_temp~1   ; out              ;
+; |scalerfilter|counter_temp~2   ; |scalerfilter|counter_temp~2   ; out              ;
+; |scalerfilter|counter_temp~3   ; |scalerfilter|counter_temp~3   ; out              ;
+; |scalerfilter|counter_temp~4   ; |scalerfilter|counter_temp~4   ; out              ;
+; |scalerfilter|counter_temp~5   ; |scalerfilter|counter_temp~5   ; out              ;
+; |scalerfilter|counter_temp~6   ; |scalerfilter|counter_temp~6   ; out              ;
+; |scalerfilter|counter_temp~7   ; |scalerfilter|counter_temp~7   ; out              ;
+; |scalerfilter|counter_temp~8   ; |scalerfilter|counter_temp~8   ; out              ;
+; |scalerfilter|counter_temp~9   ; |scalerfilter|counter_temp~9   ; out              ;
+; |scalerfilter|counter_temp~10  ; |scalerfilter|counter_temp~10  ; out              ;
+; |scalerfilter|counter_temp~11  ; |scalerfilter|counter_temp~11  ; out              ;
+; |scalerfilter|counter_temp[19] ; |scalerfilter|counter_temp[19] ; regout           ;
+; |scalerfilter|counter_temp[18] ; |scalerfilter|counter_temp[18] ; regout           ;
+; |scalerfilter|counter_temp[17] ; |scalerfilter|counter_temp[17] ; regout           ;
+; |scalerfilter|counter_temp[16] ; |scalerfilter|counter_temp[16] ; regout           ;
+; |scalerfilter|counter_temp[15] ; |scalerfilter|counter_temp[15] ; regout           ;
+; |scalerfilter|counter_temp[14] ; |scalerfilter|counter_temp[14] ; regout           ;
+; |scalerfilter|counter_temp[13] ; |scalerfilter|counter_temp[13] ; regout           ;
+; |scalerfilter|counter_temp[12] ; |scalerfilter|counter_temp[12] ; regout           ;
+; |scalerfilter|counter_temp[11] ; |scalerfilter|counter_temp[11] ; regout           ;
+; |scalerfilter|counter_temp[10] ; |scalerfilter|counter_temp[10] ; regout           ;
+; |scalerfilter|counter_temp[9]  ; |scalerfilter|counter_temp[9]  ; regout           ;
+; |scalerfilter|counter_temp[8]  ; |scalerfilter|counter_temp[8]  ; regout           ;
+; |scalerfilter|counter_temp[7]  ; |scalerfilter|counter_temp[7]  ; regout           ;
+; |scalerfilter|Add0~13          ; |scalerfilter|Add0~13          ; out0             ;
+; |scalerfilter|Add0~14          ; |scalerfilter|Add0~14          ; out0             ;
+; |scalerfilter|Add0~15          ; |scalerfilter|Add0~15          ; out0             ;
+; |scalerfilter|Add0~16          ; |scalerfilter|Add0~16          ; out0             ;
+; |scalerfilter|Add0~17          ; |scalerfilter|Add0~17          ; out0             ;
+; |scalerfilter|Add0~18          ; |scalerfilter|Add0~18          ; out0             ;
+; |scalerfilter|Add0~19          ; |scalerfilter|Add0~19          ; out0             ;
+; |scalerfilter|Add0~20          ; |scalerfilter|Add0~20          ; out0             ;
+; |scalerfilter|Add0~21          ; |scalerfilter|Add0~21          ; out0             ;
+; |scalerfilter|Add0~22          ; |scalerfilter|Add0~22          ; out0             ;
+; |scalerfilter|Add0~23          ; |scalerfilter|Add0~23          ; out0             ;
+; |scalerfilter|Add0~24          ; |scalerfilter|Add0~24          ; out0             ;
+; |scalerfilter|Add0~25          ; |scalerfilter|Add0~25          ; out0             ;
+; |scalerfilter|Add0~26          ; |scalerfilter|Add0~26          ; out0             ;
+; |scalerfilter|Add0~27          ; |scalerfilter|Add0~27          ; out0             ;
+; |scalerfilter|Add0~28          ; |scalerfilter|Add0~28          ; out0             ;
+; |scalerfilter|Add0~29          ; |scalerfilter|Add0~29          ; out0             ;
+; |scalerfilter|Add0~30          ; |scalerfilter|Add0~30          ; out0             ;
+; |scalerfilter|Add0~31          ; |scalerfilter|Add0~31          ; out0             ;
+; |scalerfilter|Add0~32          ; |scalerfilter|Add0~32          ; out0             ;
+; |scalerfilter|Add0~33          ; |scalerfilter|Add0~33          ; out0             ;
+; |scalerfilter|Add0~34          ; |scalerfilter|Add0~34          ; out0             ;
+; |scalerfilter|Add0~35          ; |scalerfilter|Add0~35          ; out0             ;
+; |scalerfilter|Add0~36          ; |scalerfilter|Add0~36          ; out0             ;
++--------------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                           ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |scalerfilter|counter_temp~0   ; |scalerfilter|counter_temp~0   ; out              ;
+; |scalerfilter|counter_temp~1   ; |scalerfilter|counter_temp~1   ; out              ;
+; |scalerfilter|counter_temp~2   ; |scalerfilter|counter_temp~2   ; out              ;
+; |scalerfilter|counter_temp~3   ; |scalerfilter|counter_temp~3   ; out              ;
+; |scalerfilter|counter_temp~4   ; |scalerfilter|counter_temp~4   ; out              ;
+; |scalerfilter|counter_temp~5   ; |scalerfilter|counter_temp~5   ; out              ;
+; |scalerfilter|counter_temp~6   ; |scalerfilter|counter_temp~6   ; out              ;
+; |scalerfilter|counter_temp~7   ; |scalerfilter|counter_temp~7   ; out              ;
+; |scalerfilter|counter_temp~8   ; |scalerfilter|counter_temp~8   ; out              ;
+; |scalerfilter|counter_temp~9   ; |scalerfilter|counter_temp~9   ; out              ;
+; |scalerfilter|counter_temp~10  ; |scalerfilter|counter_temp~10  ; out              ;
+; |scalerfilter|counter_temp~11  ; |scalerfilter|counter_temp~11  ; out              ;
+; |scalerfilter|counter_temp[19] ; |scalerfilter|counter_temp[19] ; regout           ;
+; |scalerfilter|counter_temp[18] ; |scalerfilter|counter_temp[18] ; regout           ;
+; |scalerfilter|counter_temp[17] ; |scalerfilter|counter_temp[17] ; regout           ;
+; |scalerfilter|counter_temp[16] ; |scalerfilter|counter_temp[16] ; regout           ;
+; |scalerfilter|counter_temp[15] ; |scalerfilter|counter_temp[15] ; regout           ;
+; |scalerfilter|counter_temp[14] ; |scalerfilter|counter_temp[14] ; regout           ;
+; |scalerfilter|counter_temp[13] ; |scalerfilter|counter_temp[13] ; regout           ;
+; |scalerfilter|counter_temp[12] ; |scalerfilter|counter_temp[12] ; regout           ;
+; |scalerfilter|counter_temp[11] ; |scalerfilter|counter_temp[11] ; regout           ;
+; |scalerfilter|counter_temp[10] ; |scalerfilter|counter_temp[10] ; regout           ;
+; |scalerfilter|counter_temp[9]  ; |scalerfilter|counter_temp[9]  ; regout           ;
+; |scalerfilter|counter_temp[8]  ; |scalerfilter|counter_temp[8]  ; regout           ;
+; |scalerfilter|counter_temp[7]  ; |scalerfilter|counter_temp[7]  ; regout           ;
+; |scalerfilter|reset            ; |scalerfilter|reset            ; out              ;
+; |scalerfilter|Add0~13          ; |scalerfilter|Add0~13          ; out0             ;
+; |scalerfilter|Add0~14          ; |scalerfilter|Add0~14          ; out0             ;
+; |scalerfilter|Add0~15          ; |scalerfilter|Add0~15          ; out0             ;
+; |scalerfilter|Add0~16          ; |scalerfilter|Add0~16          ; out0             ;
+; |scalerfilter|Add0~17          ; |scalerfilter|Add0~17          ; out0             ;
+; |scalerfilter|Add0~18          ; |scalerfilter|Add0~18          ; out0             ;
+; |scalerfilter|Add0~19          ; |scalerfilter|Add0~19          ; out0             ;
+; |scalerfilter|Add0~20          ; |scalerfilter|Add0~20          ; out0             ;
+; |scalerfilter|Add0~21          ; |scalerfilter|Add0~21          ; out0             ;
+; |scalerfilter|Add0~22          ; |scalerfilter|Add0~22          ; out0             ;
+; |scalerfilter|Add0~23          ; |scalerfilter|Add0~23          ; out0             ;
+; |scalerfilter|Add0~24          ; |scalerfilter|Add0~24          ; out0             ;
+; |scalerfilter|Add0~25          ; |scalerfilter|Add0~25          ; out0             ;
+; |scalerfilter|Add0~26          ; |scalerfilter|Add0~26          ; out0             ;
+; |scalerfilter|Add0~27          ; |scalerfilter|Add0~27          ; out0             ;
+; |scalerfilter|Add0~28          ; |scalerfilter|Add0~28          ; out0             ;
+; |scalerfilter|Add0~29          ; |scalerfilter|Add0~29          ; out0             ;
+; |scalerfilter|Add0~30          ; |scalerfilter|Add0~30          ; out0             ;
+; |scalerfilter|Add0~31          ; |scalerfilter|Add0~31          ; out0             ;
+; |scalerfilter|Add0~32          ; |scalerfilter|Add0~32          ; out0             ;
+; |scalerfilter|Add0~33          ; |scalerfilter|Add0~33          ; out0             ;
+; |scalerfilter|Add0~34          ; |scalerfilter|Add0~34          ; out0             ;
+; |scalerfilter|Add0~35          ; |scalerfilter|Add0~35          ; out0             ;
+; |scalerfilter|Add0~36          ; |scalerfilter|Add0~36          ; out0             ;
++--------------------------------+--------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Jan 17 17:08:00 2018
+Info: Command: quartus_sim --simulation_results_format=VWF scalerfilter -c scalerfilter
+Info (324025): Using vector source file "E:/FPGA Praktikum/Lauflicht_final/scaler_filter/Waveform1.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      58.33 %
+Info (328052): Number of transitions in simulation is 20358
+Info (324045): Vector file scalerfilter.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 341 megabytes
+    Info: Processing ended: Wed Jan 17 17:08:01 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,289 @@
+Simulator report for seven_segment_coder
+Tue Dec 12 22:16:29 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 108 nodes    ;
+; Simulation Coverage         ;      96.00 % ;
+; Total Number of Transitions ; 4743         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C70F672C6 ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                           ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                         ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Timing                                                          ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                            ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                             ;               ;
+; Vector input source                                                                        ; G:/FPGA Praktikum/2_Versuch_v2/seven_segment_coder/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                              ; On            ;
+; Check outputs                                                                              ; Off                                                             ; Off           ;
+; Report simulation coverage                                                                 ; On                                                              ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                              ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                              ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                              ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                             ; Off           ;
+; Detect glitches                                                                            ; Off                                                             ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                             ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                             ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                             ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                             ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                              ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                      ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                             ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                             ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                            ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      96.00 % ;
+; Total nodes checked                                 ; 108          ;
+; Total output ports checked                          ; 125          ;
+; Total output ports with complete 1/0-value coverage ; 120          ;
+; Total output ports with no 1/0-value coverage       ; 1            ;
+; Total output ports with no 1-value coverage         ; 1            ;
+; Total output ports with no 0-value coverage         ; 5            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                                                                                                        ;
++------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                                                      ; Output Port Name                                                                                                                               ; Output Port Type ;
++------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; |seven_segment_coder|counter[5]                                                                                                                ; |seven_segment_coder|counter[5]                                                                                                                ; regout           ;
+; |seven_segment_coder|counter[4]                                                                                                                ; |seven_segment_coder|counter[4]                                                                                                                ; regout           ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[1]~0 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[1]~0 ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[1]~0 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[1]~1 ; cout             ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[2]~2 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[2]~2 ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[2]~2 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[2]~3 ; cout             ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[3]~4 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[3]~4 ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[3]~4 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[3]~5 ; cout             ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[4]~6 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_3_result_int[4]~6 ; combout          ;
+; |seven_segment_coder|counter[3]                                                                                                                ; |seven_segment_coder|counter[3]                                                                                                                ; regout           ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[1]~0 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[1]~0 ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[1]~0 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[1]~1 ; cout             ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[2]~2 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[2]~2 ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[2]~2 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[2]~3 ; cout             ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[3]~4 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[3]~4 ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[3]~4 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[3]~5 ; cout             ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[4]~7 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[4]~7 ; cout             ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[5]~8 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_4_result_int[5]~8 ; combout          ;
+; |seven_segment_coder|counter[2]                                                                                                                ; |seven_segment_coder|counter[2]                                                                                                                ; regout           ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[1]~0 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[1]~0 ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[1]~0 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[1]~1 ; cout             ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[2]~2 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[2]~2 ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[2]~2 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[2]~3 ; cout             ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[3]~4 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[3]~4 ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[3]~4 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[3]~5 ; cout             ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[4]~7 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[4]~7 ; cout             ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[5]~8 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[5]~8 ; combout          ;
+; |seven_segment_coder|counter[1]                                                                                                                ; |seven_segment_coder|counter[1]                                                                                                                ; regout           ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[1]~1 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[1]~1 ; cout             ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[2]~3 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[2]~3 ; cout             ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[3]~5 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[3]~5 ; cout             ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[4]~7 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[4]~7 ; cout             ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[5]~8 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[5]~8 ; combout          ;
+; |seven_segment_coder|Add2~0                                                                                                                    ; |seven_segment_coder|Add2~0                                                                                                                    ; combout          ;
+; |seven_segment_coder|Add2~0                                                                                                                    ; |seven_segment_coder|Add2~1                                                                                                                    ; cout             ;
+; |seven_segment_coder|Add2~3                                                                                                                    ; |seven_segment_coder|Add2~3                                                                                                                    ; combout          ;
+; |seven_segment_coder|Add2~3                                                                                                                    ; |seven_segment_coder|Add2~4                                                                                                                    ; cout             ;
+; |seven_segment_coder|Add2~6                                                                                                                    ; |seven_segment_coder|Add2~6                                                                                                                    ; combout          ;
+; |seven_segment_coder|counter[0]                                                                                                                ; |seven_segment_coder|counter[0]                                                                                                                ; regout           ;
+; |seven_segment_coder|counter[0]~7                                                                                                              ; |seven_segment_coder|counter[0]~7                                                                                                              ; combout          ;
+; |seven_segment_coder|counter[0]~7                                                                                                              ; |seven_segment_coder|counter[0]~8                                                                                                              ; cout             ;
+; |seven_segment_coder|counter[1]~9                                                                                                              ; |seven_segment_coder|counter[1]~9                                                                                                              ; combout          ;
+; |seven_segment_coder|counter[1]~9                                                                                                              ; |seven_segment_coder|counter[1]~10                                                                                                             ; cout             ;
+; |seven_segment_coder|counter[2]~11                                                                                                             ; |seven_segment_coder|counter[2]~11                                                                                                             ; combout          ;
+; |seven_segment_coder|counter[2]~11                                                                                                             ; |seven_segment_coder|counter[2]~12                                                                                                             ; cout             ;
+; |seven_segment_coder|counter[3]~13                                                                                                             ; |seven_segment_coder|counter[3]~13                                                                                                             ; combout          ;
+; |seven_segment_coder|counter[3]~13                                                                                                             ; |seven_segment_coder|counter[3]~14                                                                                                             ; cout             ;
+; |seven_segment_coder|counter[4]~15                                                                                                             ; |seven_segment_coder|counter[4]~15                                                                                                             ; combout          ;
+; |seven_segment_coder|counter[4]~15                                                                                                             ; |seven_segment_coder|counter[4]~16                                                                                                             ; cout             ;
+; |seven_segment_coder|counter[5]~17                                                                                                             ; |seven_segment_coder|counter[5]~17                                                                                                             ; combout          ;
+; |seven_segment_coder|counter[5]~17                                                                                                             ; |seven_segment_coder|counter[5]~18                                                                                                             ; cout             ;
+; |seven_segment_coder|counter[6]~19                                                                                                             ; |seven_segment_coder|counter[6]~19                                                                                                             ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[18]~26           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[18]~26           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[17]~28           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[17]~28           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[17]~29           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[17]~29           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[16]~30           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[16]~30           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[16]~31           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[16]~31           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[15]~32           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[15]~32           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[15]~33           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[15]~33           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[23]~34           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[23]~34           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[22]~35           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[22]~35           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[21]~36           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[21]~36           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[21]~37           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[21]~37           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[20]~38           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[20]~38           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[20]~39           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[20]~39           ; combout          ;
+; |seven_segment_coder|LessThan1~0                                                                                                               ; |seven_segment_coder|LessThan1~0                                                                                                               ; combout          ;
+; |seven_segment_coder|Mux7~0                                                                                                                    ; |seven_segment_coder|Mux7~0                                                                                                                    ; combout          ;
+; |seven_segment_coder|LessThan1~1                                                                                                               ; |seven_segment_coder|LessThan1~1                                                                                                               ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[28]~40           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[28]~40           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[27]~41           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[27]~41           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[26]~42           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[26]~42           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[26]~43           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[26]~43           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[25]~44           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[25]~44           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[25]~45           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[25]~45           ; combout          ;
+; |seven_segment_coder|Mux6~0                                                                                                                    ; |seven_segment_coder|Mux6~0                                                                                                                    ; combout          ;
+; |seven_segment_coder|Mux5~0                                                                                                                    ; |seven_segment_coder|Mux5~0                                                                                                                    ; combout          ;
+; |seven_segment_coder|Mux4~0                                                                                                                    ; |seven_segment_coder|Mux4~0                                                                                                                    ; combout          ;
+; |seven_segment_coder|Mux3~0                                                                                                                    ; |seven_segment_coder|Mux3~0                                                                                                                    ; combout          ;
+; |seven_segment_coder|Mux2~0                                                                                                                    ; |seven_segment_coder|Mux2~0                                                                                                                    ; combout          ;
+; |seven_segment_coder|Mux1~0                                                                                                                    ; |seven_segment_coder|Mux1~0                                                                                                                    ; combout          ;
+; |seven_segment_coder|Mux0~0                                                                                                                    ; |seven_segment_coder|Mux0~0                                                                                                                    ; combout          ;
+; |seven_segment_coder|Add2~2                                                                                                                    ; |seven_segment_coder|Add2~2                                                                                                                    ; combout          ;
+; |seven_segment_coder|Add2~5                                                                                                                    ; |seven_segment_coder|Add2~5                                                                                                                    ; combout          ;
+; |seven_segment_coder|Add1~0                                                                                                                    ; |seven_segment_coder|Add1~0                                                                                                                    ; combout          ;
+; |seven_segment_coder|Add2~8                                                                                                                    ; |seven_segment_coder|Add2~8                                                                                                                    ; combout          ;
+; |seven_segment_coder|Mux15~0                                                                                                                   ; |seven_segment_coder|Mux15~0                                                                                                                   ; combout          ;
+; |seven_segment_coder|Mux14~0                                                                                                                   ; |seven_segment_coder|Mux14~0                                                                                                                   ; combout          ;
+; |seven_segment_coder|Mux13~0                                                                                                                   ; |seven_segment_coder|Mux13~0                                                                                                                   ; combout          ;
+; |seven_segment_coder|Mux12~0                                                                                                                   ; |seven_segment_coder|Mux12~0                                                                                                                   ; combout          ;
+; |seven_segment_coder|Mux11~0                                                                                                                   ; |seven_segment_coder|Mux11~0                                                                                                                   ; combout          ;
+; |seven_segment_coder|Mux10~0                                                                                                                   ; |seven_segment_coder|Mux10~0                                                                                                                   ; combout          ;
+; |seven_segment_coder|Mux9~0                                                                                                                    ; |seven_segment_coder|Mux9~0                                                                                                                    ; combout          ;
+; |seven_segment_coder|Mux8~0                                                                                                                    ; |seven_segment_coder|Mux8~0                                                                                                                    ; combout          ;
+; |seven_segment_coder|LessThan0~0                                                                                                               ; |seven_segment_coder|LessThan0~0                                                                                                               ; combout          ;
+; |seven_segment_coder|LessThan0~1                                                                                                               ; |seven_segment_coder|LessThan0~1                                                                                                               ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[28]~46           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[28]~46           ; combout          ;
+; |seven_segment_coder|multiplesOfTen[0]~7                                                                                                       ; |seven_segment_coder|multiplesOfTen[0]~7                                                                                                       ; combout          ;
+; |seven_segment_coder|multiplesOfTen[1]~8                                                                                                       ; |seven_segment_coder|multiplesOfTen[1]~8                                                                                                       ; combout          ;
+; |seven_segment_coder|multiplesOfTen[2]~9                                                                                                       ; |seven_segment_coder|multiplesOfTen[2]~9                                                                                                       ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[23]~47           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[23]~47           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[22]~48           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[22]~48           ; combout          ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[27]~49           ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[27]~49           ; combout          ;
+; |seven_segment_coder|u32[0]                                                                                                                    ; |seven_segment_coder|u32[0]                                                                                                                    ; padio            ;
+; |seven_segment_coder|u32[1]                                                                                                                    ; |seven_segment_coder|u32[1]                                                                                                                    ; padio            ;
+; |seven_segment_coder|u32[2]                                                                                                                    ; |seven_segment_coder|u32[2]                                                                                                                    ; padio            ;
+; |seven_segment_coder|u32[3]                                                                                                                    ; |seven_segment_coder|u32[3]                                                                                                                    ; padio            ;
+; |seven_segment_coder|u32[4]                                                                                                                    ; |seven_segment_coder|u32[4]                                                                                                                    ; padio            ;
+; |seven_segment_coder|u32[5]                                                                                                                    ; |seven_segment_coder|u32[5]                                                                                                                    ; padio            ;
+; |seven_segment_coder|u32[6]                                                                                                                    ; |seven_segment_coder|u32[6]                                                                                                                    ; padio            ;
+; |seven_segment_coder|u32[7]                                                                                                                    ; |seven_segment_coder|u32[7]                                                                                                                    ; padio            ;
+; |seven_segment_coder|u33[0]                                                                                                                    ; |seven_segment_coder|u33[0]                                                                                                                    ; padio            ;
+; |seven_segment_coder|u33[1]                                                                                                                    ; |seven_segment_coder|u33[1]                                                                                                                    ; padio            ;
+; |seven_segment_coder|u33[2]                                                                                                                    ; |seven_segment_coder|u33[2]                                                                                                                    ; padio            ;
+; |seven_segment_coder|u33[3]                                                                                                                    ; |seven_segment_coder|u33[3]                                                                                                                    ; padio            ;
+; |seven_segment_coder|u33[4]                                                                                                                    ; |seven_segment_coder|u33[4]                                                                                                                    ; padio            ;
+; |seven_segment_coder|u33[5]                                                                                                                    ; |seven_segment_coder|u33[5]                                                                                                                    ; padio            ;
+; |seven_segment_coder|u33[6]                                                                                                                    ; |seven_segment_coder|u33[6]                                                                                                                    ; padio            ;
+; |seven_segment_coder|u33[7]                                                                                                                    ; |seven_segment_coder|u33[7]                                                                                                                    ; padio            ;
+; |seven_segment_coder|tick                                                                                                                      ; |seven_segment_coder|tick~corein                                                                                                               ; combout          ;
+; |seven_segment_coder|tick~clkctrl                                                                                                              ; |seven_segment_coder|tick~clkctrl                                                                                                              ; outclk           ;
++------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                                                                                       ;
++--------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                                            ; Output Port Name                                                                                                                     ; Output Port Type ;
++--------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[18]~27 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[18]~27 ; combout          ;
++--------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                                                                                       ;
++--------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                                            ; Output Port Name                                                                                                                     ; Output Port Type ;
++--------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; |seven_segment_coder|counter[6]                                                                                                      ; |seven_segment_coder|counter[6]                                                                                                      ; regout           ;
+; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[18]~27 ; |seven_segment_coder|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[18]~27 ; combout          ;
+; |seven_segment_coder|multiplesOfTen[3]~6                                                                                             ; |seven_segment_coder|multiplesOfTen[3]~6                                                                                             ; combout          ;
+; |seven_segment_coder|reset                                                                                                           ; |seven_segment_coder|reset~corein                                                                                                    ; combout          ;
+; |seven_segment_coder|reset~clkctrl                                                                                                   ; |seven_segment_coder|reset~clkctrl                                                                                                   ; outclk           ;
++--------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Dec 12 22:16:29 2017
+Info: Command: quartus_sim --simulation_results_format=VWF seven_segment_coder -c seven_segment_coder
+Info (324025): Using vector source file "G:/FPGA Praktikum/2_Versuch_v2/seven_segment_coder/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      96.00 %
+Info (328052): Number of transitions in simulation is 4743
+Info (324045): Vector file seven_segment_coder.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 364 megabytes
+    Info: Processing ended: Tue Dec 12 22:16:30 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,85 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'muster_ubernahme'
+Slack : -4.345
+TNS   : -30.177
+
+Type  : Slow Model Setup 'rythm[0]'
+Slack : -2.961
+TNS   : -19.557
+
+Type  : Slow Model Hold 'rythm[0]'
+Slack : -2.382
+TNS   : -13.054
+
+Type  : Slow Model Hold 'muster_ubernahme'
+Slack : -1.498
+TNS   : -4.525
+
+Type  : Slow Model Recovery 'muster_ubernahme'
+Slack : -3.211
+TNS   : -9.386
+
+Type  : Slow Model Recovery 'rythm[0]'
+Slack : -1.827
+TNS   : -5.234
+
+Type  : Slow Model Removal 'rythm[0]'
+Slack : -1.392
+TNS   : -5.552
+
+Type  : Slow Model Removal 'muster_ubernahme'
+Slack : -0.508
+TNS   : -1.518
+
+Type  : Slow Model Minimum Pulse Width 'muster_ubernahme'
+Slack : -1.380
+TNS   : -3.234
+
+Type  : Slow Model Minimum Pulse Width 'rythm[0]'
+Slack : -1.222
+TNS   : -6.808
+
+Type  : Fast Model Setup 'muster_ubernahme'
+Slack : -1.553
+TNS   : -9.011
+
+Type  : Fast Model Setup 'rythm[0]'
+Slack : -0.875
+TNS   : -4.101
+
+Type  : Fast Model Hold 'rythm[0]'
+Slack : -1.385
+TNS   : -9.403
+
+Type  : Fast Model Hold 'muster_ubernahme'
+Slack : -1.046
+TNS   : -3.158
+
+Type  : Fast Model Recovery 'muster_ubernahme'
+Slack : -1.058
+TNS   : -3.053
+
+Type  : Fast Model Recovery 'rythm[0]'
+Slack : -0.380
+TNS   : -1.019
+
+Type  : Fast Model Removal 'rythm[0]'
+Slack : -0.950
+TNS   : -3.327
+
+Type  : Fast Model Removal 'muster_ubernahme'
+Slack : -0.611
+TNS   : -1.827
+
+Type  : Fast Model Minimum Pulse Width 'muster_ubernahme'
+Slack : -1.380
+TNS   : -1.380
+
+Type  : Fast Model Minimum Pulse Width 'rythm[0]'
+Slack : -1.222
+TNS   : -2.080
+
+------------------------------------------------------------

@@ -1,0 +1,16 @@
+|reverse_control
+reverse_switch => out_temp.OUTPUTSELECT
+reverse_switch => state.OUTPUTSELECT
+reverse_switch => out_temp.OUTPUTSELECT
+reverse_switch => state.OUTPUTSELECT
+reverse_switch => out_temp.OUTPUTSELECT
+reverse_switch => state.OUTPUTSELECT
+reverse_switch => out_temp.OUTPUTSELECT
+reverse_switch => state.OUTPUTSELECT
+reset => out_temp.PRESET
+reset => state.PRESET
+clk => out_temp.CLK
+clk => state.CLK
+send_reverse <= out_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

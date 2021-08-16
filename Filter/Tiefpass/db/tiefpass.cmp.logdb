@@ -1,0 +1,5 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,altmult_add0_tp:inst|altmult_add:ALTMULT_ADD_component|mult_add_q774:auto_generated|ded_mult_d491:ded_mult3|mac_out10,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,altmult_add0_tp:inst|altmult_add:ALTMULT_ADD_component|mult_add_q774:auto_generated|ded_mult_d491:ded_mult2|mac_out10,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,altmult_add0_tp:inst|altmult_add:ALTMULT_ADD_component|mult_add_q774:auto_generated|ded_mult_d491:ded_mult1|mac_out10,
+PORT_SWAPPING,PORT_SWAPPING_FINISHED,altmult_add0_tp:inst|altmult_add:ALTMULT_ADD_component|mult_add_q774:auto_generated|ded_mult_d491:ded_mult2|mac_mult9,

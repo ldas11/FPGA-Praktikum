@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Nov 15 16:12:53 2017
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : Vergleich_Faltungscodierer
+Top-level Entity Name : Vergleich_Faltungscodierer
+Family : Cyclone II
+Total logic elements : 15
+    Total combinational functions : 12
+    Dedicated logic registers : 11
+Total registers : 11
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

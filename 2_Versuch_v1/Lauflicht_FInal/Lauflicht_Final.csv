@@ -1,0 +1,59 @@
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+# Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+# File: E:\FPGA Praktikum\Lauflicht_FInal\Lauflicht_Final.csv
+# Generated on: Wed Dec 06 18:10:05 2017
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Differential Pair
+CLOCK,Input,PIN_U20,6,B6_N1,PIN_P1,,,,
+in_MUSTER[7],Input,PIN_AE19,7,B7_N2,PIN_G15,,,,
+in_MUSTER[6],Input,PIN_AE18,7,B7_N2,PIN_F15,,,,
+in_MUSTER[5],Input,PIN_AC20,7,B7_N1,PIN_A17,,,,
+in_MUSTER[4],Input,PIN_AF4,8,B8_N3,PIN_C15,,,,
+in_MUSTER[3],Input,PIN_C23,4,B4_N0,PIN_B17,,,,
+in_MUSTER[2],Input,PIN_C21,4,B4_N0,PIN_C16,,,,
+in_MUSTER[1],Input,PIN_A19,4,B4_N1,PIN_A18,,,,
+in_MUSTER[0],Input,PIN_AC13,8,B8_N0,PIN_D13,,,,
+MUSTER_UBERNAHME,Input,PIN_AC18,7,B7_N1,PIN_P2,,,,
+out_LED[7],Output,PIN_AA7,1,B1_N3,PIN_B18,,,,
+out_LED[6],Output,PIN_AA6,1,B1_N3,PIN_F17,,,,
+out_LED[5],Output,PIN_AB4,1,B1_N3,PIN_G17,,,,
+out_LED[4],Output,PIN_AC3,1,B1_N3,PIN_F16,,,,
+out_LED[3],Output,PIN_E22,5,B5_N0,PIN_D17,,,,
+out_LED[2],Output,PIN_F20,5,B5_N0,PIN_E15,,,,
+out_LED[1],Output,PIN_B3,2,B2_N0,PIN_D15,,,,
+out_LED[0],Output,PIN_E5,2,B2_N0,PIN_B16,,,,
+out_U_32[7],Output,PIN_Y21,6,B6_N3,PIN_F12,,,,
+out_U_32[6],Output,PIN_T7,1,B1_N1,PIN_B14,,,,
+out_U_32[5],Output,PIN_AB23,6,B6_N2,PIN_D14,,,,
+out_U_32[4],Output,PIN_Y5,1,B1_N3,PIN_C11,,,,
+out_U_32[3],Output,PIN_E1,2,B2_N1,PIN_C12,,,,
+out_U_32[2],Output,PIN_U1,1,B1_N1,PIN_G12,,,,
+out_U_32[1],Output,PIN_W21,6,B6_N3,PIN_D11,,,,
+out_U_32[0],Output,PIN_V3,1,B1_N1,PIN_B9,,,,
+out_U_33[7],Output,PIN_K2,2,B2_N2,PIN_A14,,,,
+out_U_33[6],Output,PIN_U25,6,B6_N1,PIN_F13,,,,
+out_U_33[5],Output,PIN_AA3,1,B1_N3,PIN_G13,,,,
+out_U_33[4],Output,PIN_V1,1,B1_N1,PIN_G14,,,,
+out_U_33[3],Output,PIN_V7,1,B1_N2,PIN_B12,,,,
+out_U_33[2],Output,PIN_U23,6,B6_N1,PIN_F14,,,,
+out_U_33[1],Output,PIN_AC2,1,B1_N3,PIN_B11,,,,
+out_U_33[0],Output,PIN_P7,1,B1_N0,PIN_A6,,,,
+RESET,Input,PIN_A14,4,B4_N3,PIN_C13,,,,
+REVERSE,Input,PIN_AE16,7,B7_N2,PIN_D16,,,,
+RUN_PAUSE,Input,PIN_AE14,7,B7_N3,PIN_B15,,,,
+SPEED,Input,PIN_AE22,7,B7_N0,PIN_G16,,,,

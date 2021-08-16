@@ -1,0 +1,16 @@
+|run_control
+reset => state.PRESET
+reset => run_pause_temp.PRESET
+start_switch => run_pause_temp.OUTPUTSELECT
+start_switch => state.OUTPUTSELECT
+start_switch => run_pause_temp.OUTPUTSELECT
+start_switch => state.OUTPUTSELECT
+start_switch => run_pause_temp.OUTPUTSELECT
+start_switch => state.OUTPUTSELECT
+start_switch => run_pause_temp.OUTPUTSELECT
+start_switch => state.OUTPUTSELECT
+clk => state.CLK
+clk => run_pause_temp.CLK
+run_pause <= run_pause_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

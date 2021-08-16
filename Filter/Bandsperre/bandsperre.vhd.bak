@@ -1,0 +1,75 @@
+library library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;	
+
+entity bandpass is
+	port (
+			adc_in : in std_logic_vector(13 downto 0);
+			clk, reset : in std_logic;
+			dac_out : std_logic_vector(13 downto 0);
+		);
+end bandpass;
+
+architecture filter of bandpass is
+	
+	signal x_0 : std_logic_vector(13 downto 0);
+
+	signal mult0_0 : std_logic_vector(16 downto 0);
+	signal mult0_1 : std_logic_vector(16 downto 0);
+	signal mult0_2 : std_logic_vector(16 downto 0);
+
+	signal mult2 : std_logic_vector(16 downto 0);
+
+	signal factor_0 : std_logic_vector(2 downto 0);
+	signal factor_2 : std_logic_vector(2 downto 0);
+
+	signal akkumulator : std_logic_vector(17 downto 0);
+
+
+begin
+	
+	process(clk, reset, adc_in)
+		
+		begin
+			
+			if(reset = '0') then
+				
+				x_0 <= "00000000000000";
+			
+
+			elsif(clk'event and clk = '1') then
+
+				x_0 <= adc_in;
+				
+			end if;
+
+	end process;
+
+	process(factor_0, factor_2, x_0)
+
+		begin
+			mult0_0 <= (x_0 * factor_0);
+			mult2 <= (x_0 * factor_2);
+	end process;
+
+	process(clk,reset)
+		begin
+			if(reset = '0') then
+				--mult0_0 <= "00000000000000000";
+				mult0_1 <= "00000000000000000";
+				mult0_2 <= "00000000000000000";
+
+			elsif(clk'event and clk = '1') then
+				mult0_1<= mult0_0;
+				mult0_2<= mult0_1;
+		end if;
+	end process;
+
+	process(mult0, mult2)
+		begin
+			akkumulator <=(mult0_2 + mult2);
+	end process;
+
+	dac_out <= akkumulator(15 downto 2);
+
+end architecture filter;

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Jan 24 16:35:50 2018
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : lauflicht
+Top-level Entity Name : lauflicht
+Family : Cyclone II
+Total logic elements : 414
+    Total combinational functions : 412
+    Dedicated logic registers : 173
+Total registers : 173
+Total pins : 38
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

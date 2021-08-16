@@ -1,0 +1,14 @@
+Partition Merge Status : Successful - Wed Jan 31 14:17:21 2018
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : AlleFilter
+Top-level Entity Name : AlleFilter
+Family : Cyclone II
+Total logic elements : 1,269
+    Total combinational functions : 778
+    Dedicated logic registers : 927
+Total registers : 927
+Total pins : 52
+Total virtual pins : 0
+Total memory bits : 229,376
+Embedded Multiplier 9-bit elements : 6
+Total PLLs : 0

@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dG:\FPGA Praktikum\2_Versuch_v2\final_counter\simulation\qsim
+vfinal_counter
+Z1 I_j`:m0GL@P_4z<YPMH4X53
+Z2 VOQeLmGZz;037m>F6QACjH0
+Z3 dG:\FPGA Praktikum\2_Versuch_v2\final_counter\simulation\qsim
+Z4 w1513115632
+Z5 8final_counter.vo
+Z6 Ffinal_counter.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 =IW4nI5NgQNiXChe^Hn3i0
+!s85 0
+Z10 !s108 1513115633.796000
+Z11 !s107 final_counter.vo|
+Z12 !s90 -work|work|final_counter.vo|
+!s101 -O0
+vfinal_counter_vlg_check_tst
+!i10b 1
+!s100 gYCe?IEmV=eOP>T?Ohi9e3
+I7P1o1=7ShDZ6zXGM7W8mV0
+V4C]aDP<I3TndTBT]:DbeF1
+R3
+R4
+Z13 8final_counter.vt
+Z14 Ffinal_counter.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z15 !s108 1513115634.229000
+Z16 !s107 final_counter.vt|
+Z17 !s90 -work|work|final_counter.vt|
+!s101 -O0
+R8
+vfinal_counter_vlg_sample_tst
+!i10b 1
+!s100 G;iR;:h7eAoY7Ck>i]CBS1
+IEfXd;2P1=l;_OS^il9I>O2
+Vzgk[f25F8lSGjPZ_9Yg5[1
+R3
+R4
+R13
+R14
+L0 29
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!s101 -O0
+R8
+vfinal_counter_vlg_vec_tst
+!i10b 1
+!s100 YYW[@W78Yig@^ZEXN5]fn3
+ILjlA:L^`>m7D_<Le6fh4N1
+VYNS4[2TYA[^GSIOFDE>5j3
+R3
+R4
+R13
+R14
+L0 156
+R7
+r1
+!s85 0
+31
+R15
+R16
+R17
+!s101 -O0
+R8

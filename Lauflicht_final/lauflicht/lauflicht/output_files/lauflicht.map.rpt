@@ -1,0 +1,450 @@
+Analysis & Synthesis report for lauflicht
+Wed Dec 13 16:22:34 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |lauflicht|leds_controller:inst1|current_state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for Inferred Entity Instance: seven_segment_coder:inst6|lpm_divide:Div0
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++------------------------------------+--------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Dec 13 16:22:34 2017            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; lauflicht                                        ;
+; Top-level Entity Name              ; lauflicht                                        ;
+; Family                             ; Cyclone II                                       ;
+; Total logic elements               ; 414                                              ;
+;     Total combinational functions  ; 412                                              ;
+;     Dedicated logic registers      ; 173                                              ;
+; Total registers                    ; 173                                              ;
+; Total pins                         ; 38                                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
++------------------------------------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C70F672C6       ;                    ;
+; Top-level entity name                                                      ; lauflicht          ; lauflicht          ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++---------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path      ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                ; Library ;
++---------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+---------+
+; other symbols/Entprellmodul.vhd       ; yes             ; User VHDL File                     ; E:/FPGA Praktikum/Lauflicht/lauflicht/other symbols/Entprellmodul.vhd       ;         ;
+; other symbols/seven_segment_coder.vhd ; yes             ; User VHDL File                     ; E:/FPGA Praktikum/Lauflicht/lauflicht/other symbols/seven_segment_coder.vhd ;         ;
+; other symbols/scaler.vhd              ; yes             ; User VHDL File                     ; E:/FPGA Praktikum/Lauflicht/lauflicht/other symbols/scaler.vhd              ;         ;
+; other symbols/run_control.vhd         ; yes             ; User VHDL File                     ; E:/FPGA Praktikum/Lauflicht/lauflicht/other symbols/run_control.vhd         ;         ;
+; other symbols/reverse_control.vhd     ; yes             ; User VHDL File                     ; E:/FPGA Praktikum/Lauflicht/lauflicht/other symbols/reverse_control.vhd     ;         ;
+; other symbols/muster_control.vhd      ; yes             ; User VHDL File                     ; E:/FPGA Praktikum/Lauflicht/lauflicht/other symbols/muster_control.vhd      ;         ;
+; other symbols/leds_controller.vhd     ; yes             ; User VHDL File                     ; E:/FPGA Praktikum/Lauflicht/lauflicht/other symbols/leds_controller.vhd     ;         ;
+; other symbols/final_counter.vhd       ; yes             ; User VHDL File                     ; E:/FPGA Praktikum/Lauflicht/lauflicht/other symbols/final_counter.vhd       ;         ;
+; other symbols/lauflicht.bdf           ; yes             ; User Block Diagram/Schematic File  ; E:/FPGA Praktikum/Lauflicht/lauflicht/other symbols/lauflicht.bdf           ;         ;
+; lpm_divide.tdf                        ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf            ;         ;
+; abs_divider.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc           ;         ;
+; sign_div_unsign.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc       ;         ;
+; aglobal130.inc                        ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc            ;         ;
+; db/lpm_divide_0dm.tdf                 ; yes             ; Auto-Generated Megafunction        ; E:/FPGA Praktikum/Lauflicht/lauflicht/db/lpm_divide_0dm.tdf                 ;         ;
+; db/sign_div_unsign_akh.tdf            ; yes             ; Auto-Generated Megafunction        ; E:/FPGA Praktikum/Lauflicht/lauflicht/db/sign_div_unsign_akh.tdf            ;         ;
+; db/alt_u_div_mve.tdf                  ; yes             ; Auto-Generated Megafunction        ; E:/FPGA Praktikum/Lauflicht/lauflicht/db/alt_u_div_mve.tdf                  ;         ;
+; db/add_sub_lkc.tdf                    ; yes             ; Auto-Generated Megafunction        ; E:/FPGA Praktikum/Lauflicht/lauflicht/db/add_sub_lkc.tdf                    ;         ;
+; db/add_sub_mkc.tdf                    ; yes             ; Auto-Generated Megafunction        ; E:/FPGA Praktikum/Lauflicht/lauflicht/db/add_sub_mkc.tdf                    ;         ;
++---------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 414   ;
+;                                             ;       ;
+; Total combinational functions               ; 412   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 162   ;
+;     -- 3 input functions                    ; 65    ;
+;     -- <=2 input functions                  ; 185   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 273   ;
+;     -- arithmetic mode                      ; 139   ;
+;                                             ;       ;
+; Total registers                             ; 173   ;
+;     -- Dedicated logic registers            ; 173   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 38    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 147   ;
+; Total fan-out                               ; 1892  ;
+; Average fan-out                             ; 3.04  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |lauflicht                                ; 412 (0)           ; 173 (0)      ; 0           ; 0            ; 0       ; 0         ; 38   ; 0            ; |lauflicht                                                                                                                           ; work         ;
+;    |Entprellmodul:inst10|                 ; 28 (28)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|Entprellmodul:inst10                                                                                                      ; work         ;
+;    |Entprellmodul:inst11|                 ; 28 (28)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|Entprellmodul:inst11                                                                                                      ; work         ;
+;    |Entprellmodul:inst7|                  ; 28 (28)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|Entprellmodul:inst7                                                                                                       ; work         ;
+;    |Entprellmodul:inst8|                  ; 28 (28)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|Entprellmodul:inst8                                                                                                       ; work         ;
+;    |Entprellmodul:inst9|                  ; 28 (28)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|Entprellmodul:inst9                                                                                                       ; work         ;
+;    |final_counter:inst|                   ; 4 (4)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|final_counter:inst                                                                                                        ; work         ;
+;    |leds_controller:inst1|                ; 81 (81)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|leds_controller:inst1                                                                                                     ; work         ;
+;    |muster_control:inst2|                 ; 10 (10)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|muster_control:inst2                                                                                                      ; work         ;
+;    |reverse_control:inst3|                ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|reverse_control:inst3                                                                                                     ; work         ;
+;    |run_control:inst4|                    ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|run_control:inst4                                                                                                         ; work         ;
+;    |scaler:inst5|                         ; 94 (94)           ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|scaler:inst5                                                                                                              ; work         ;
+;    |seven_segment_coder:inst6|            ; 81 (38)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|seven_segment_coder:inst6                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                   ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|seven_segment_coder:inst6|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_0dm:auto_generated|  ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|seven_segment_coder:inst6|lpm_divide:Div0|lpm_divide_0dm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_akh:divider| ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|seven_segment_coder:inst6|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider                       ; work         ;
+;                |alt_u_div_mve:divider|    ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lauflicht|seven_segment_coder:inst6|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |lauflicht|leds_controller:inst1|current_state                                                                                                                                                                                                                                   ;
++-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+; Name              ; current_state.s14 ; current_state.s13 ; current_state.s12 ; current_state.s11 ; current_state.s10 ; current_state.s9 ; current_state.s8 ; current_state.s7 ; current_state.s6 ; current_state.s5 ; current_state.s4 ; current_state.s3 ; current_state.s2 ; current_state.s1 ;
++-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+; current_state.s1  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ;
+; current_state.s2  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 1                ;
+; current_state.s3  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 1                ;
+; current_state.s4  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 1                ;
+; current_state.s5  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.s6  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.s7  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.s8  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.s9  ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.s10 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.s11 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.s12 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.s13 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
+; current_state.s14 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ;
++-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++---------------------------------------+----------------------------------------------+
+; Register name                         ; Reason for Removal                           ;
++---------------------------------------+----------------------------------------------+
+; final_counter:inst|state[1]           ; Stuck at GND due to stuck port data_in       ;
+; reverse_control:inst3|state           ; Merged with reverse_control:inst3|out_temp   ;
+; run_control:inst4|state               ; Merged with run_control:inst4|run_pause_temp ;
+; Total Number of Removed Registers = 3 ;                                              ;
++---------------------------------------+----------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 173   ;
+; Number of registers using Synchronous Clear  ; 7     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 173   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 145   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; muster_control:inst2|muster_temp[1]     ; 9       ;
+; muster_control:inst2|muster_temp[2]     ; 9       ;
+; muster_control:inst2|muster_temp[3]     ; 9       ;
+; muster_control:inst2|muster_temp[4]     ; 9       ;
+; muster_control:inst2|muster_temp[5]     ; 9       ;
+; muster_control:inst2|muster_temp[7]     ; 9       ;
+; muster_control:inst2|muster_temp[6]     ; 9       ;
+; Entprellmodul:inst10|PB                 ; 69      ;
+; Entprellmodul:inst8|PB                  ; 11      ;
+; Entprellmodul:inst11|PB                 ; 2       ;
+; scaler:inst5|counter_temp[0]            ; 2       ;
+; Entprellmodul:inst9|PB                  ; 2       ;
+; Entprellmodul:inst7|PB                  ; 3       ;
+; Total number of inverted registers = 13 ;         ;
++-----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 7:1                ; 26 bits   ; 104 LEs       ; 26 LEs               ; 78 LEs                 ; Yes        ; |lauflicht|scaler:inst5|counter_temp[25]       ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |lauflicht|muster_control:inst2|muster_temp[7] ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |lauflicht|leds_controller:inst1|Selector19    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: seven_segment_coder:inst6|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                             ;
++------------------------+----------------+--------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
+; CBXI_PARAMETER         ; lpm_divide_0dm ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
++------------------------+----------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Dec 13 16:22:27 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lauflicht -c lauflicht
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file other symbols/entprellmodul.vhd
+    Info (12022): Found design unit 1: Entprellmodul-behav
+    Info (12023): Found entity 1: Entprellmodul
+Info (12021): Found 2 design units, including 1 entities, in source file other symbols/seven_segment_coder.vhd
+    Info (12022): Found design unit 1: seven_segment_coder-display_count
+    Info (12023): Found entity 1: seven_segment_coder
+Info (12021): Found 2 design units, including 1 entities, in source file other symbols/scaler.vhd
+    Info (12022): Found design unit 1: scaler-speed_control
+    Info (12023): Found entity 1: scaler
+Info (12021): Found 2 design units, including 1 entities, in source file other symbols/run_control.vhd
+    Info (12022): Found design unit 1: run_control-run
+    Info (12023): Found entity 1: run_control
+Info (12021): Found 2 design units, including 1 entities, in source file other symbols/reverse_control.vhd
+    Info (12022): Found design unit 1: reverse_control-switch
+    Info (12023): Found entity 1: reverse_control
+Info (12021): Found 2 design units, including 1 entities, in source file other symbols/muster_control.vhd
+    Info (12022): Found design unit 1: muster_control-set_template
+    Info (12023): Found entity 1: muster_control
+Info (12021): Found 2 design units, including 1 entities, in source file other symbols/leds_controller.vhd
+    Info (12022): Found design unit 1: leds_controller-control
+    Info (12023): Found entity 1: leds_controller
+Info (12021): Found 2 design units, including 1 entities, in source file other symbols/final_counter.vhd
+    Info (12022): Found design unit 1: final_counter-count
+    Info (12023): Found entity 1: final_counter
+Info (12021): Found 1 design units, including 1 entities, in source file other symbols/lauflicht.bdf
+    Info (12023): Found entity 1: lauflicht
+Info (12127): Elaborating entity "lauflicht" for the top level hierarchy
+Warning (275011): Block or symbol "Entprellmodul" of instance "inst8" overlaps another block or symbol
+Info (12128): Elaborating entity "leds_controller" for hierarchy "leds_controller:inst1"
+Warning (10492): VHDL Process Statement warning at leds_controller.vhd(37): signal "current_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at leds_controller.vhd(48): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process
+Info (12128): Elaborating entity "Entprellmodul" for hierarchy "Entprellmodul:inst10"
+Warning (10492): VHDL Process Statement warning at Entprellmodul.vhd(23): signal "button" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "reverse_control" for hierarchy "reverse_control:inst3"
+Info (12128): Elaborating entity "run_control" for hierarchy "run_control:inst4"
+Info (12128): Elaborating entity "scaler" for hierarchy "scaler:inst5"
+Warning (10492): VHDL Process Statement warning at scaler.vhd(26): signal "counter_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at scaler.vhd(27): signal "state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "muster_control" for hierarchy "muster_control:inst2"
+Info (12128): Elaborating entity "seven_segment_coder" for hierarchy "seven_segment_coder:inst6"
+Info (12128): Elaborating entity "final_counter" for hierarchy "final_counter:inst"
+Warning (10492): VHDL Process Statement warning at final_counter.vhd(38): signal "scaler" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "seven_segment_coder:inst6|Div0"
+Info (12130): Elaborated megafunction instantiation "seven_segment_coder:inst6|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "seven_segment_coder:inst6|lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_0dm.tdf
+    Info (12023): Found entity 1: lpm_divide_0dm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_akh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
+    Info (12023): Found entity 1: alt_u_div_mve
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_lkc.tdf
+    Info (12023): Found entity 1: add_sub_lkc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
+    Info (12023): Found entity 1: add_sub_mkc
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register scaler:inst5|counter_temp[0] will power up to High
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 454 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 24 output pins
+    Info (21061): Implemented 416 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 541 megabytes
+    Info: Processing ended: Wed Dec 13 16:22:35 2017
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:03
+
+

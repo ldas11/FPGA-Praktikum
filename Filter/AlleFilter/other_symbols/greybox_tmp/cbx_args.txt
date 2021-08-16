@@ -1,0 +1,14 @@
+LPM_PIPELINE=1
+LPM_SIZE=4
+LPM_TYPE=LPM_MUX
+LPM_WIDTH=14
+LPM_WIDTHS=2
+DEVICE_FAMILY="Cyclone II"
+aclr
+clock
+data
+data
+data
+data
+sel
+result
